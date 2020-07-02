@@ -1,0 +1,31 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: elk
+spec:
+  selector:
+    matchLabels:
+      app: elk
+  replicas: 1
+  template:
+    metadata:
+      labels:
+       app: elk
+    spec:
+      containers:
+      - name: elasticsearch
+        image: oreldm/elk2:elasticsearch
+        ports:
+        - containerPort: 9200
+        - containerPort: 9300
+      - name: kibana
+        image: oreldm/elk2:kibana
+        ports:
+        - containerPort: 5601
+      - name: logstash
+        image: oreldm/elk2:logstash
+        ports:
+        - containerPort: 5000
+        - containerPort: 9600
+      - name: filebeat
+        image: oreldm/elk2:filebeat
