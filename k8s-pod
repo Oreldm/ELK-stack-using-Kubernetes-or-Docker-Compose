@@ -1,3 +1,17 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: elk
+spec:
+  ports:
+  - nodePort: 32222
+    port: 5601
+    protocol: TCP
+    targetPort: 5601
+  selector:
+    app: elk
+  type: NodePort
+---
 apiVersion: apps/v1
 kind: Deployment
 metadata:
