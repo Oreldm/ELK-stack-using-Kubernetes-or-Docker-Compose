@@ -1,0 +1,10 @@
+Created by orel damari
+
+Instructions:
+1. create minikube
+2. run create -f k8s-pod
+3. kubectl get nodes
+4. take the minikube ip
+5. go to http://{minikube-ip}:32222
+
+have fun
