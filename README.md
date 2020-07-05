@@ -1,4 +1,19 @@
-JUST RUN docker-compose up :)
-created by orel damari
+# ELK-stack-with-docker-compose / Kubernetes
+Instructions:
 
-# ELK-stack-with-docker-compose
+Kubernetes:
+1. create minikube
+2. run create -f k8s-pod
+3. kubectl get nodes
+4. take the minikube ip
+5. go to http://{minikube-ip}:32222
+
+
+Docker: 
+1. docker-compose up
+
+have fun
+
+
+
+Created by orel damari
