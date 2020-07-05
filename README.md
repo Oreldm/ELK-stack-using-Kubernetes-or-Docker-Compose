@@ -11,6 +11,7 @@ Kubernetes:
 
 Docker: 
 1. docker-compose up
+2. localhost:5601
 
 have fun
 
